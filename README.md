@@ -4,17 +4,17 @@ This project is demo project of micro service using spring boot.
 
 Project has three service. 
 1. edge-service
-2. eurekaService
+2. eurekaServer
 3. item-catalog
 
-eurekaService
+eurekaServer
 This service work as naming service. It's like service register, every other service should be register with this service. That mean all other service information is available to this service.
 
 Spring Boot Project dependencies
 Eureka Server - Server for service lookup.
 
 item-catalog
-This service has a actual implementation of service. All item API implementation is available with this service. And it should register with eurekaService.
+This service has a actual implementation of service. All item API implementation is available with this service. And it should register with eurekaServer.
 
 Spring Boot Project dependencies
 
@@ -30,7 +30,7 @@ Lombok - To avoid boiler plate codes.
 
 
 edge-service
-This service is edge service, it is also register with eurekaService. This service is ready to interact with consumer and it's also using the fall back technique, it should response back valid data in case of non availability of any other service.
+This service is edge service, it is also register with eurekaServer. This service is ready to interact with consumer and it's also using the fall back technique, it should response back valid data in case of non availability of any other service.
 
 Spring Boot Project dependencies
 
@@ -47,10 +47,10 @@ How to create project:
 Import as maven project to eclipse.
 
 How to run:
-Run eurekaService first, so it will be available to register other service and then run other service.
+Run eurekaServer first, so it will be available to register other service and then run other service.
 
 URLS:
-eurekaService : http://localhost:8761/
+eurekaServer : http://localhost:8761/
 item-catalog : http://localhost:8088/items
 edge-service : http://localhost:8089/top-brands
 
