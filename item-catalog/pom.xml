@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.flavor</groupId>
-	<artifactId>item-Catlog</artifactId>
+	<artifactId>item-catalog</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>item-Catlog</name>
+	<name>item-catalog</name>
 	<description>service that will register with eurekaServer</description>
 
 	<parent>

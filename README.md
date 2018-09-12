@@ -5,7 +5,7 @@ This project is demo project of micro service using spring boot.
 Project has three service. 
 1. edge-service
 2. eurekaService
-3. item-Catlog
+3. item-catalog
 
 eurekaService
 This service work as naming service. It's like service register, every other service should be register with this service. That mean all other service information is available to this service.
@@ -13,7 +13,7 @@ This service work as naming service. It's like service register, every other ser
 Spring Boot Project dependencies
 Eureka Server - Server for service lookup.
 
-item-Catlog
+item-catalog
 This service has a actual implementation of service. All item API implementation is available with this service. And it should register with eurekaService.
 
 Spring Boot Project dependencies
@@ -37,7 +37,7 @@ Spring Boot Project dependencies
 Actuator - To monitor and maintain 
 Eureka Discovery - To register service with Eureka Server
 Feign - Rest client.
-Zuul - As Proxy and dynamic routing to the api calls.
+Zuul - As Proxy and dynamic routing and filtering the api calls.
 RestRepositories - DAO api as REST 
 Web - In build tomcat server, MVC
 Hystrix - Circuit breaker, for fall back. 
@@ -48,5 +48,11 @@ Import as maven project to eclipse.
 
 How to run:
 Run eurekaService first, so it will be available to register other service and then run other service.
+
+URLS:
+eurekaService : http://localhost:8761/
+item-catalog : http://localhost:8088/items
+edge-service : http://localhost:8089/top-brands
+
 
 
